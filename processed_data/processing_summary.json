@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-23 20:06:15",
+  "stats": {
+    "total_records_processed": 239159,
+    "quality_overall": {},
+    "exported_files": [
+      "C:\\Users\\90650\\PycharmProjects\\data_processing\\processed_data\\projects_processed.json",
+      "C:\\Users\\90650\\PycharmProjects\\data_processing\\processed_data\\owners_processed.json",
+      "C:\\Users\\90650\\PycharmProjects\\data_processing\\processed_data\\organizations_processed.json",
+      "C:\\Users\\90650\\PycharmProjects\\data_processing\\processed_data\\commits_processed.json",
+      "C:\\Users\\90650\\PycharmProjects\\data_processing\\processed_data\\contributors_processed.json"
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+PS C:\Users\90650\PycharmProjects\data_processing> python -m data_processing.main
+2026-05-23 20:03:51,200 - data_processing - INFO - ============================================================
+2026-05-23 20:03:51,200 - data_processing - INFO - 开始数据处理流程
+2026-05-23 20:03:51,200 - data_processing - INFO - 开始时间: 2026-05-23 20:03:51
+2026-05-23 20:03:51,200 - data_processing - INFO - ============================================================
+2026-05-23 20:03:51,201 - data_processing - INFO -
+[阶段1/6] 数据加载
+2026-05-23 20:03:51,225 - data_processing - INFO - Loaded 2161 records from projects
+2026-05-23 20:03:51,243 - data_processing - INFO - Loaded 1073 records from owners
+2026-05-23 20:03:51,250 - data_processing - INFO - Loaded 895 records from organizations
+2026-05-23 20:03:52,742 - data_processing - INFO - Loaded 172345 records from commits
+2026-05-23 20:03:53,013 - data_processing - INFO - Loaded 62685 records from contributors
+2026-05-23 20:03:53,013 - data_processing - INFO -   projects: 2161 条记录
+2026-05-23 20:03:53,013 - data_processing - INFO -   owners: 1073 条记录
+2026-05-23 20:03:53,014 - data_processing - INFO -   organizations: 895 条记录
+2026-05-23 20:03:53,014 - data_processing - INFO -   commits: 172345 条记录
+2026-05-23 20:03:53,014 - data_processing - INFO -   contributors: 62685 条记录
+2026-05-23 20:03:53,014 - data_processing - INFO -
+[阶段2/6] 数据清洗
+2026-05-23 20:03:53,014 - data_processing - INFO - Starting cleaning process for projects
+2026-05-23 20:03:53,016 - data_processing - INFO - Deduplication completed: 0 duplicates removed
+2026-05-23 20:03:53,021 - data_processing - INFO - Missing field analysis for projects: {'_id': {'missing_count': 0, 'missing_rate': 0.0}, 'name': {'missing_count': 0, 'missing_rate': 0.0}, 'full_name': {'missing_count': 0, 'missing_rate': 0.0}, 'owner': {'missing_count': 0, 'missing_rate': 0.0}, 'description':
+ {'missing_count': 48, 'missing_rate': 0.0222}, 'language': {'missing_count': 1, 'missing_rate': 0.0005}, 'stars_count': {'missing_count': 0, 'missing_rate': 0.0}, 'forks_count': {'missing_count': 0, 'missing_rate': 0.0}, 'open_issues_count': {'missing_count': 0, 'missing_rate': 0.0}, 'created_at': {'missing_co
+unt': 0, 'missing_rate': 0.0}, 'updated_at': {'missing_count': 0, 'missing_rate': 0.0}, 'topics': {'missing_count': 0, 'missing_rate': 0.0}, 'license': {'missing_count': 321, 'missing_rate': 0.1485}, 'watchers_count': {'missing_count': 0, 'missing_rate': 0.0}, 'size': {'missing_count': 0, 'missing_rate': 0.0}, 'default_branch': {'missing_count': 0, 'missing_rate': 0.0}, 'category': {'missing_count': 2161, 'missing_rate': 1.0}, 'quality_score': {'missing_count': 2161, 'missing_rate': 1.0}, 'long_term_value': {'missing_count': 2161, 'missing_rate': 1.0}}
+2026-05-23 20:03:53,030 - data_processing - INFO - Cleaning completed for projects: 2161 records remaining
+2026-05-23 20:03:53,031 - data_processing - INFO -   projects: 2161 条记录
+2026-05-23 20:03:53,031 - data_processing - INFO - Starting cleaning process for owners
+2026-05-23 20:03:53,032 - data_processing - INFO - Deduplication for login: 0 duplicates removed
+2026-05-23 20:03:53,033 - data_processing - INFO - Missing field analysis for owners: {'_id': {'missing_count': 0, 'missing_rate': 0.0}, 'login': {'missing_count': 0, 'missing_rate': 0.0}, 'type': {'missing_count': 0, 'missing_rate': 0.0}, 'avatar_url': {'missing_count': 0, 'missing_rate': 0.0}, 'url': {'missing_count': 0, 'missing_rate': 0.0}, 'repos_count': {'missing_count': 0, 'missing_rate': 0.0}, 'followers_count': {'missing_count': 0, 'missing_rate': 0.0}}
+2026-05-23 20:03:53,034 - data_processing - INFO - Cleaning completed for owners: 1073 records remaining
+2026-05-23 20:03:53,035 - data_processing - INFO -   owners: 1073 条记录
+2026-05-23 20:03:53,035 - data_processing - INFO - Starting cleaning process for organizations
+2026-05-23 20:03:53,036 - data_processing - INFO - Deduplication for login: 0 duplicates removed
+2026-05-23 20:03:53,036 - data_processing - INFO - Missing field analysis for organizations: {'_id': {'missing_count': 0, 'missing_rate': 0.0}, 'login': {'missing_count': 0, 'missing_rate': 0.0}, 'name': {'missing_count': 103, 'missing_rate': 0.1151}, 'description': {'missing_count': 356, 'missing_rate': 0.3978
+}, 'avatar_url': {'missing_count': 0, 'missing_rate': 0.0}, 'url': {'missing_count': 0, 'missing_rate': 0.0}, 'repos_count': {'missing_count': 0, 'missing_rate': 0.0}, 'members_count': {'missing_count': 895, 'missing_rate': 1.0}, 'created_at': {'missing_count': 0, 'missing_rate': 0.0}, 'activity_score': {'missing_count': 895, 'missing_rate': 1.0}, 'tech_depth': {'missing_count': 895, 'missing_rate': 1.0}, 'main_tech_stacks': {'missing_count': 0, 'missing_rate': 0.0}}
+2026-05-23 20:03:53,038 - data_processing - INFO - Cleaning completed for organizations: 895 records remaining
+2026-05-23 20:03:53,038 - data_processing - INFO -   organizations: 895 条记录
+2026-05-23 20:03:53,038 - data_processing - INFO - Starting cleaning process for commits
+2026-05-23 20:03:53,187 - data_processing - INFO - Missing field analysis for commits: {'_id': {'missing_count': 0, 'missing_rate': 0.0}, 'project_id': {'missing_count': 0, 'missing_rate': 0.0}, 'sha': {'missing_count': 0, 'missing_rate': 0.0}, 'author': {'missing_count': 1, 'missing_rate': 0.0}, 'message': {'missing_count': 5, 'missing_rate': 0.0}, 'date': {'missing_count': 0, 'missing_rate': 0.0}, 'additions': {'missing_count': 0, 'missing_rate': 0.0}, 'deletions': {'missing_count': 0, 'missing_rate': 0.0}}
+2026-05-23 20:03:53,361 - data_processing - INFO - Cleaning completed for commits: 172345 records remaining
+2026-05-23 20:03:53,361 - data_processing - INFO -   commits: 172345 条记录
+2026-05-23 20:03:53,361 - data_processing - INFO - Starting cleaning process for contributors
+2026-05-23 20:03:53,401 - data_processing - INFO - Missing field analysis for contributors: {'_id': {'missing_count': 0, 'missing_rate': 0.0}, 'login': {'missing_count': 0, 'missing_rate': 0.0}, 'avatar_url': {'missing_count': 0, 'missing_rate': 0.0}, 'contributions': {'missing_count': 0, 'missing_rate': 0.0}, 'project_id': {'missing_count': 0, 'missing_rate': 0.0}}
+2026-05-23 20:03:53,465 - data_processing - INFO - Cleaning completed for contributors: 62685 records remaining
+2026-05-23 20:03:53,467 - data_processing - INFO -   contributors: 62685 条记录
+2026-05-23 20:03:53,467 - data_processing - INFO -
+[阶段3/6] 数据转换
+2026-05-23 20:03:53,467 - data_processing - INFO - Starting transformation process for projects
+2026-05-23 20:03:53,618 - data_processing - INFO - Field names standardized to snake_case
+2026-05-23 20:03:53,702 - data_processing - INFO - Data types converted
+2026-05-23 20:03:53,708 - data_processing - INFO - Text fields normalized
+2026-05-23 20:03:53,711 - data_processing - INFO - Transformation completed for projects
+2026-05-23 20:03:53,711 - data_processing - INFO - Starting transformation process for owners
+2026-05-23 20:03:53,737 - data_processing - INFO - Field names standardized to snake_case
+2026-05-23 20:03:53,741 - data_processing - INFO - Data types converted
+2026-05-23 20:03:53,742 - data_processing - INFO - Text fields normalized
+2026-05-23 20:03:53,743 - data_processing - INFO - Transformation completed for owners
+2026-05-23 20:03:53,743 - data_processing - INFO - Starting transformation process for organizations
+2026-05-23 20:03:53,780 - data_processing - INFO - Field names standardized to snake_case
+2026-05-23 20:03:53,785 - data_processing - INFO - Data types converted
+2026-05-23 20:03:53,787 - data_processing - INFO - Text fields normalized
+2026-05-23 20:03:53,787 - data_processing - INFO - Transformation completed for organizations
+2026-05-23 20:03:53,788 - data_processing - INFO - Starting transformation process for commits
+2026-05-23 20:03:58,769 - data_processing - INFO - Field names standardized to snake_case
+2026-05-23 20:04:00,920 - data_processing - INFO - Data types converted
+2026-05-23 20:04:00,945 - data_processing - INFO - Text fields normalized
+2026-05-23 20:04:00,988 - data_processing - INFO - Transformation completed for commits
+2026-05-23 20:04:00,988 - data_processing - INFO - Starting transformation process for contributors
+2026-05-23 20:04:01,455 - data_processing - INFO - Field names standardized to snake_case
+2026-05-23 20:04:01,543 - data_processing - INFO - Data types converted
+2026-05-23 20:04:01,570 - data_processing - INFO - Text fields normalized
+2026-05-23 20:04:01,580 - data_processing - INFO - Transformation completed for contributors
+2026-05-23 20:04:01,580 - data_processing - INFO -
+[阶段4/6] 字段补充
+2026-05-23 20:04:01,581 - data_processing - INFO -   - 项目品类分类
+2026-05-23 20:04:01,581 - data_processing - INFO - Classifying 2161 projects
+2026-05-23 20:04:01,601 - data_processing - INFO - Category distribution: {'Web': 266, 'AI/ML': 134, 'Other': 766, 'Database': 159, 'Mobile': 324, 'Library': 238, 'Tool': 202, 'Desktop': 72}
+2026-05-23 20:04:01,601 - data_processing - INFO -   - 项目质量评分计算
+2026-05-23 20:04:01,601 - data_processing - INFO - Calculating quality scores for 2161 projects
+2026-05-23 20:04:20,848 - data_processing - INFO - Average quality score: 0.4542
+2026-05-23 20:04:20,849 - data_processing - INFO -   - 项目长期价值评估
+2026-05-23 20:04:20,849 - data_processing - INFO - Calculating long-term values for 2161 projects
+2026-05-23 20:05:45,132 - data_processing - INFO - Average long-term value: 0.6739
+2026-05-23 20:05:45,132 - data_processing - INFO -   - 组织活跃度评分和技术深度计算
+2026-05-23 20:05:45,132 - data_processing - INFO - Calculating organization metrics for 895 organizations
+2026-05-23 20:06:13,880 - data_processing - INFO - Average activity score: 0.3592
+2026-05-23 20:06:13,881 - data_processing - INFO - Average tech depth: 0.0621
+2026-05-23 20:06:13,881 - data_processing - INFO -
+[阶段5/6] 质量评估
+2026-05-23 20:06:13,881 - data_processing - INFO - Assessing quality for projects
+2026-05-23 20:06:13,889 - data_processing - INFO - Quality assessment for projects: {'collection_name': 'projects', 'record_count': 2161, 'completeness': 1.0, 'uniqueness': 1.0, 'consistency': 1.0, 'accuracy': 1.0, 'overall_score': 1.0, 'is_acceptable': True}
+2026-05-23 20:06:13,889 - data_processing - INFO - Assessing quality for owners
+2026-05-23 20:06:13,891 - data_processing - INFO - Quality assessment for owners: {'collection_name': 'owners', 'record_count': 1073, 'completeness': 1.0, 'uniqueness': 1.0, 'consistency': 1.0, 'accuracy': 1.0, 'overall_score': 1.0, 'is_acceptable': True}
+2026-05-23 20:06:13,891 - data_processing - INFO - Assessing quality for organizations
+2026-05-23 20:06:13,893 - data_processing - INFO - Quality assessment for organizations: {'collection_name': 'organizations', 'record_count': 895, 'completeness': 0.9808, 'uniqueness': 1.0, 'consistency': 1.0, 'accuracy': 1.0, 'overall_score': 0.9952, 'is_acceptable': True}
+2026-05-23 20:06:13,893 - data_processing - INFO - Assessing quality for commits
+2026-05-23 20:06:14,255 - data_processing - INFO - Quality assessment for commits: {'collection_name': 'commits', 'record_count': 172345, 'completeness': 1.0, 'uniqueness': 1.0, 'consistency': 1.0, 'accuracy': 1.0, 'overall_score': 1.0, 'is_acceptable': True}
+2026-05-23 20:06:14,255 - data_processing - INFO - Assessing quality for contributors
+2026-05-23 20:06:14,345 - data_processing - INFO - Quality assessment for contributors: {'collection_name': 'contributors', 'record_count': 62685, 'completeness': 1.0, 'uniqueness': 1.0, 'consistency': 1.0, 'accuracy': 1.0, 'overall_score': 1.0, 'is_acceptable': True}
+2026-05-23 20:06:14,347 - data_processing - INFO - 
+[阶段6/6] 数据导出
+2026-05-23 20:06:14,368 - data_processing - INFO - Exported 2161 records to C:\Users\90650\PycharmProjects\data_processing\processed_data\projects_processed.json
+2026-05-23 20:06:14,373 - data_processing - INFO - Exported 1073 records to C:\Users\90650\PycharmProjects\data_processing\processed_data\owners_processed.json
+2026-05-23 20:06:14,380 - data_processing - INFO - Exported 895 records to C:\Users\90650\PycharmProjects\data_processing\processed_data\organizations_processed.json
+2026-05-23 20:06:15,436 - data_processing - INFO - Exported 172345 records to C:\Users\90650\PycharmProjects\data_processing\processed_data\commits_processed.json
+2026-05-23 20:06:15,670 - data_processing - INFO - Exported 62685 records to C:\Users\90650\PycharmProjects\data_processing\processed_data\contributors_processed.json
+2026-05-23 20:06:15,671 - data_processing - INFO -   已导出: projects_processed.json
+2026-05-23 20:06:15,671 - data_processing - INFO -   已导出: owners_processed.json
+2026-05-23 20:06:15,671 - data_processing - INFO -   已导出: organizations_processed.json
+2026-05-23 20:06:15,671 - data_processing - INFO -   已导出: commits_processed.json
+2026-05-23 20:06:15,671 - data_processing - INFO -   已导出: contributors_processed.json
+2026-05-23 20:06:15,672 - data_processing - INFO - Quality report exported to C:\Users\90650\PycharmProjects\data_processing\processed_data\quality_report.md
+2026-05-23 20:06:15,672 - data_processing - INFO - Processing summary exported to C:\Users\90650\PycharmProjects\data_processing\processed_data\processing_summary.json
+2026-05-23 20:06:15,672 - data_processing - INFO -
+============================================================
+2026-05-23 20:06:15,672 - data_processing - INFO - 数据处理流程完成
+2026-05-23 20:06:15,673 - data_processing - INFO - 结束时间: 2026-05-23 20:06:15
+2026-05-23 20:06:15,673 - data_processing - INFO - 耗时: 144.47 秒
+2026-05-23 20:06:15,673 - data_processing - INFO - ============================================================
+
+数据处理完成！
+总记录数: 239159
+导出文件: 5 个
+质量报告已生成
+PS C:\Users\90650\PycharmProjects\data_processing> 
